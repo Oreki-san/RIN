@@ -16,6 +16,10 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage, parsedArgs: IParsedArgs): Promise<void> => {
+            const n = [
+            './assets/videos/Rin/rin.mp4'
+        ]
+        let rin = n[Math.floor(Math.random() * n.length)]
         if (!parsedArgs.joined) {
             const commands = this.handler.commands.keys()
             const categories: { [key: string]: ICommand[] } = {}
@@ -29,16 +33,30 @@ export default class Command extends BaseCommand {
                     categories[info.config.category].push(info)
                 }
             }
-            let text = `🎫 *${this.client.config.name} Command List* 🎫\n\n`
+            let text =`
+╭─「(づ￣ 3￣)づ」
+│⋊ ᴜꜱᴇʀ: *${M.sender.username}*
+│⋊ ɴᴀᴍᴇ: ᖇᎥᑎ
+│⋊ ᴘʀᴇꜰɪx: ${this.client.config.prefix}
+│⋊ ᴏᴡɴᴇʀ: <${this.client.config.prefix}mod>
+╰────────────┈平和                            \n\n`
             const keys = Object.keys(categories)
             for (const key of keys)
                 text += `${this.emojis[keys.indexOf(key)]} *${this.client.util.capitalize(key)}*\n❐ \`\`\`${categories[
                     key
                 ]
                     .map((command) => command.config?.command)
-                    .join(', ')}\`\`\`\n\n`
-            return void M.reply(
-                `${text} 🗃️ *Note: Use ${this.client.config.prefix}help <command_name> to view the command info*`
+                    .join(' , ')}\`\`\`\n\n`
+            return void this.client.sendMessage(M.from, { url: shinobu }, MessageType.video, {quoted:M.WAMessage,
+            mimetype: Mimetype.gif,
+            caption: `${text} 
+ ──❅┈[ ᖇᎥᑎ ᗷᗝ丅 ]┈❅───
+┌────────────┈❅
+│   🧨 ᖇᎥᑎ
+│   ©️ Synthesized Infinity Botto
+└────────────┈⁂
+❅┈[𝐇𝐚𝐯𝐞 𝐆𝐫𝐞𝐚𝐭 𝐃𝐚𝐲]┈❅
+🎗 *Note: Use ${this.client.config.prefix}help <command_name> to view the command info*` }
             )
         }
         const key = parsedArgs.joined.toLowerCase()
@@ -46,15 +64,15 @@ export default class Command extends BaseCommand {
         if (!command) return void M.reply(`No Command of Alias Found | "${key}"`)
         const state = await this.client.DB.disabledcommands.findOne({ command: command.config.command })
         M.reply(
-            `🎫 *Command:* ${this.client.util.capitalize(command.config?.command)}\n🎗️ *Status:* ${
+            `🎈 *Command:* ${this.client.util.capitalize(command.config?.command)}\n📉 *Status:* ${
                 state ? 'Disabled' : 'Available'
-            }\n🀄 *Category:* ${this.client.util.capitalize(command.config?.category || '')}${
+            }\n⛩ *Category:* ${this.client.util.capitalize(command.config?.category || '')}${
                 command.config.aliases
-                    ? `\n🍥 *Aliases:* ${command.config.aliases.map(this.client.util.capitalize).join(', ')}`
+                    ? `\n♦️ *Aliases:* ${command.config.aliases.map(this.client.util.capitalize).join(', ')}`
                     : ''
-            }\n🃏 *Group Only:* ${this.client.util.capitalize(
+            }\n🎐 *Group Only:* ${this.client.util.capitalize(
                 JSON.stringify(!command.config.dm ?? true)
-            )}\n🎀 *Usage:* ${command.config?.usage || ''}\n\n🔖 *Description:* ${command.config?.description || ''}`
+            )}\n💎 *Usage:* ${command.config?.usage || ''}\n\n📒 *Description:* ${command.config?.description || ''}`
         )
     }
 
