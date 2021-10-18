@@ -3,7 +3,7 @@
 
 # **RIN : Next Level Void WhatsApp BOTTO**
 
-[![CodeFactor](https://www.codefactor.io/repository/github/Oreki-san/RIN/badge)](https://www.codefactor.io/repository/github/Oreki-san/RIN)
+[![CodeFactor](https://www.codefactor.io/repository/github/prajjwaldatir/kaoi/badge)](https://www.codefactor.io/repository/github/prajjwaldatir/kaoi)
 
 ## [![WhatsApp Group](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)]() [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/) [![NodeJs](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/)
 
@@ -44,4 +44,4 @@ Use any one of the above to deploy
     requests
 -   Make sure to follow the ESLint Rules while editing the code and run
     `yarn run prettier-format` before opening PRs
-
+## Give a ⭐ if this project helped you
