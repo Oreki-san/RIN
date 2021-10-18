@@ -47,7 +47,7 @@ export default class Command extends BaseCommand {
                 ]
                     .map((command) => command.config?.command)
                     .join(' , ')}\`\`\`\n\n`
-            return void this.client.sendMessage(M.from, { url: shinobu }, MessageType.video, {quoted:M.WAMessage,
+            return void this.client.sendMessage(M.from, { url: rin }, MessageType.video, {quoted:M.WAMessage,
             mimetype: Mimetype.gif,
             caption: `${text} 
  ──❅┈[ ᖇᎥᑎ ᗷᗝ丅 ]┈❅───
