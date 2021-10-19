@@ -4,17 +4,18 @@ import WAClient from '../../lib/WAClient'
 import { ISimplifiedMessage } from '../../typings'
 import Canvas from 'canvas'
 import GIFEncoder from 'gifencoder'
-import { Sticker } from 'wa-sticker-formatter/lib'
-import { MessageType } from '@adiwajshing/baileys'
+import { Sticker } from 'wa-sticker-formatter'
+import { MessageType, Mimetype } from '@adiwajshing/baileys'
+// import { MessageType, Mimetype } from '@adiwajshing/baileys'
 
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
             command: 'trigger',
-            description: 'Triggers you.',
-            aliases: ['triggered'],
+            description: 'Sends the triggered version of you',
             category: 'fun',
-            usage: `${client.config.prefix}trigger [image | @mention]`
+            usage: `${client.config.prefix}trigger [tag/caption image | @mention]`,
+            baseXp: 10
         })
     }
 
@@ -57,19 +58,22 @@ export default class Command extends BaseCommand {
                 ? this.client.downloadMediaMessage(M.WAMessage)
                 : M.quoted?.message?.message?.imageMessage
                 ? this.client.downloadMediaMessage(M.quoted.message)
-                : M.mentioned[0]
+                : M.quoted?.sender
+                ? this.client.getProfilePicture(M.quoted.sender)
+                : M.mentioned
                 ? this.client.getProfilePicture(M.mentioned[0])
-                : this.client.getProfilePicture(M.quoted?.sender || M.sender.jid))
+                : this.client.getProfilePicture(M.sender.jid))
             const sticker = new Sticker(await getImage(image), {
                 pack: `Triggered`,
-                author: M.sender.username || this.client.config.name,
-                crop: false
+                author: M.sender.username || `RIN`,
+                type: 'full',
+                categories: ['💢']
             })
-            await sticker.build()
-            return void (await M.reply(await sticker.get(), MessageType.sticker))
+            if (!sticker) return void M.reply(`I couldn't find an image to trigger.`)
+            return void (await M.reply(await sticker.build(), MessageType.sticker, Mimetype.webp))
         } catch (err) {
             console.log(err)
-            M.reply(`Couldn't fetch the required Image`)
+            M.reply(`Couldn't fetch the required Image.\n*Error* : ${err}`)
         }
     }
 }
