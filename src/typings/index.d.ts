@@ -9,6 +9,8 @@ export interface IConfig {
     prefix: string
     session: string
     mods: string[]
+    gkey: string
+    chatBotUrl: string
 }
 
 export interface IParsedArgs {
@@ -35,6 +37,8 @@ export interface IGroup {
     nsfw: boolean
     safe: boolean
     mod: boolean
+    cmd: boolean
+    invitelink: boolean
 }
 
 export interface IUser {
@@ -42,6 +46,11 @@ export interface IUser {
     ban: boolean
     warnings: number
     Xp: number
+}
+
+export interface IFeature {
+    feature: string
+    state: boolean
 }
 
 export interface IPackage {
