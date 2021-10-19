@@ -14,7 +14,6 @@ Button : If you are deploying normally
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-Use any one of the above to deploy
 
 </div><br/>
 <br/>
