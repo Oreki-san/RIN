@@ -1,18 +1,18 @@
 {
-    "name": "kaoi",
+    "name": "void",
     "version": "2.0.0",
     "description": "A fully Object Oriented WhatsApp bot built with TypeScript",
-    "main": "dist/kaoi.js",
+    "main": "dist/void.js",
     "scripts": {
         "build": "tsc -p .",
-        "start": "node dist/kaoi.js",
+        "start": "node dist/void.js",
         "lint": "eslint \"src/**/*.ts\"",
         "prettier-format": "prettier --config .prettierrc \"src/**/*.ts\" --write",
         "postinstall": "yarn run build"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/PrajjwalDatir/Kaoi.git"
+        "url": "git+https://github.com/Oreki-san/RIN.git"
     },
     "keywords": [
         "bot",
@@ -21,12 +21,12 @@
         "whatsapp-botto-void",
         "kaoi"
     ],
-    "author": "Synthesized Infinity & Prajjwal Datir",
+    "author": "Synthesized Infinity",
     "license": "AGPL-3.0",
     "bugs": {
-        "url": "https://github.com/PrajjwalDatir/Kaoi/issues"
+        "url": "https://github.com/Oreki-san/RIN/issues"
     },
-    "homepage": "https://github.com/PrajjwalDatir/Kaoi#readme",
+    "homepage": "https://github.com/Oreki-san/RIN#readme",
     "devDependencies": {
         "@types/express": "^4.17.12",
         "@types/fs-extra": "^9.0.11",
