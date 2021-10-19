@@ -13,8 +13,8 @@ export default class Command extends BaseCommand {
             command: 'neko',
             description: 'sends you the anime neko.',
             aliases: ['neko'],
-            category: 'weeb',
-            usage: `${client.config.prefix}waifu`
+            category: 'anime',
+            usage: `${client.config.prefix}neko`
         })
     }
 
