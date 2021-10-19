@@ -16,7 +16,18 @@ export interface ICommand {
         usage?: string
         dm?: boolean
         baseXp?: number
+        modsOnly?: boolean
     }
 }
 
-export type TCategory = 'general' | 'moderation' | 'misc' | 'media' | 'utils' | 'dev' | 'category' | 'fun'
+export type TCategory =
+    | 'anime'
+    | 'dev'
+    | 'fun'
+    | 'educative'
+    | 'general'
+    | 'media'
+    | 'misc'
+    | 'moderation'
+    | 'utils'
+    | 'category'
