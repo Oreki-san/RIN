@@ -47,3 +47,4 @@ export default class Command extends BaseCommand {
         }
         return void null
     }
+}
