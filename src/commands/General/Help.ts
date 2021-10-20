@@ -20,7 +20,7 @@ export default class Command extends BaseCommand {
             const n = [
             './assets/videos/Rin/rin.mp4'
         ]
-        let rin = n[Math.floor(Math.random() * n.length)]
+        let rin = this.client.assets.get('rin')
         if (!parsedArgs.joined) {
             const commands = this.handler.commands.keys()
             const categories: { [key: string]: ICommand[] } = {}
