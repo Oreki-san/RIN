@@ -1,8 +1,10 @@
-import { MessageType, Mimetype } from '@adiwajshing/baileys'
 import MessageHandler from '../../Handlers/MessageHandler'
 import BaseCommand from '../../lib/BaseCommand'
 import WAClient from '../../lib/WAClient'
 import { ICommand, IParsedArgs, ISimplifiedMessage } from '../../typings'
+import { MessageType, Mimetype } from '@adiwajshing/baileys'
+import request from '../../lib/request'
+
 
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
@@ -11,7 +13,6 @@ export default class Command extends BaseCommand {
             description: 'Displays the help menu or shows the info of the command provided',
             category: 'general',
             usage: `${client.config.prefix}help (command_name)`,
-            dm: true,
             aliases: ['h']
         })
     }
@@ -20,7 +21,7 @@ export default class Command extends BaseCommand {
             const n = [
             './assets/videos/Rin/rin.mp4'
         ]
-        let rin = this.client.assets.get('rin')
+        let rin = n[Math.floor(Math.random() * n.length)]
         if (!parsedArgs.joined) {
             const commands = this.handler.commands.keys()
             const categories: { [key: string]: ICommand[] } = {}
@@ -34,7 +35,7 @@ export default class Command extends BaseCommand {
                     categories[info.config.category].push(info)
                 }
             }
-            let text =`
+            let text = `
 ╭─「(づ￣ 3￣)づ」
 │⋊ ᴜꜱᴇʀ: *${M.sender.username}*
 │⋊ ɴᴀᴍᴇ: ᖇᎥᑎ
@@ -43,11 +44,11 @@ export default class Command extends BaseCommand {
 ╰────────────┈平和                            \n\n`
             const keys = Object.keys(categories)
             for (const key of keys)
-                text += `${this.emojis[keys.indexOf(key)]} *${this.client.util.capitalize(key)}*\n❐ \`\`\`${categories[
+                text += `${this.emojis[keys.indexOf(key)]} *${this.client.util.capitalize(key)}* ${this.emojis[keys.indexOf(key)]}\n\n• \`\`\`${categories[
                     key
                 ]
                     .map((command) => command.config?.command)
-                    .join(' , ')}\`\`\`\n\n`
+                    .join(' \n ')}\`\`\`\n\n`
             return void this.client.sendMessage(M.from, { url: rin }, MessageType.video, {quoted:M.WAMessage,
             mimetype: Mimetype.gif,
             caption: `${text} 
@@ -77,5 +78,5 @@ export default class Command extends BaseCommand {
         )
     }
 
-    emojis = ['🌀', '🎴', '🔮', '👑', '🎈', '⚙️', '🍀']
+    emojis = ['🌀', '🎴', '🔮', '👑', '🎈', '⚙️', '🍀','🌀', '🎴', '🔮', '👑', '🎈', '⚙️', '🍀']
 }
