@@ -32,7 +32,7 @@ export default class Command extends BaseCommand {
 
     run = async (M: ISimplifiedMessage, parsedArgs: IParsedArgs): Promise<void> => {
 
-        return void M.reply("This command is under development")
+        return void M.reply("I still can't steal from cute people")
 
     }
 
