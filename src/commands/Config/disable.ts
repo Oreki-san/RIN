@@ -8,7 +8,7 @@ export default class Command extends BaseCommand {
         super(client, handler, {
             command: 'disable',
             description: 'Disables the given command from being used globally',
-            category: 'Config',
+            category: 'config',
             dm: true,
             usage: `${client.config.prefix}config [command] | (reason)`,
             modsOnly: true,
