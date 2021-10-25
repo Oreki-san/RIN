@@ -8,7 +8,7 @@ export default class Command extends BaseCommand {
         super(client, handler, {
             command: 'enable',
             description: 'Enables the given command globally',
-            category: 'config',
+            category: 'Config',
             dm: true,
             usage: `${client.config.prefix}enable [command]`,
             modsOnly: true,
