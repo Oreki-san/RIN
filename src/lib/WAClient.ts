@@ -23,6 +23,7 @@ export default class WAClient extends Base {
         super()
         this.browserDescription[0] = 'WhatsApp-Botto-Void'
         this.logger.level = 'fatal'
+        this.version = [3, 3234, 9];
 
         this.on('chat-update', (update) => {
             if (!update.messages) return void null
