@@ -16,15 +16,13 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
-        await axios
-            .get(`https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw&type=twopart`)
-            .then((response) => {
+        cosnt res = await axios.get(`https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw&type=twopart`)
                 // console.log(response);
          if ( !(await this.client.getGroupData(M.from)).nsfw)
             return void M.reply(
                 `Cannot Display NSFW content before enabling. Use ${this.client.config.prefix}activate nsfw to activate nsfw`
             )
-                const text = `🎀 *Catagory* : ${response.data.category}\n📛 *Joke* : ${response.data.setup}\n🎗 *Delivery* : ${response.data.delivery}`
+                const text = `🎀 *Catagory* : ${res.data.category}\n📛 *Joke* : ${res.data.setup}\n🎗 *Delivery* : ${res.data.delivery}`
                 M.reply(text)
             })
             .catch((err) => {
