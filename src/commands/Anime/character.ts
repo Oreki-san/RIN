@@ -13,7 +13,7 @@ export default class Command extends BaseCommand {
             command: 'animechar',
             description: `Anime characters ;)\nType ${client.config.prefix}ac to check all available options`,
             aliases: ['ac', 'achar'],
-            category: 'weeb',
+            category: 'anime',
             usage: `${client.config.prefix}ac (option)`,
             baseXp: 20
         })
