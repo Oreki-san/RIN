@@ -1,31 +1,36 @@
 import MessageHandler from '../../Handlers/MessageHandler'
 import BaseCommand from '../../lib/BaseCommand'
 import WAClient from '../../lib/WAClient'
-import { ISimplifiedMessage } from '../../typings'
-import axios from 'axios'
+import { IParsedArgs, ISimplifiedMessage } from '../../typings'
+import AnimeQuotes from 'animequotes'
 
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
             command: 'animequote',
-            description: 'random anime quote.',
+            description: 'Will give you random anime quote for the given character.',
             aliases: ['aq'],
-            category: 'anime',
-            usage: `${client.config.prefix}animequote`,
+            category: 'weeb',
+            usage: `${client.config.prefix}animequote [character_name]`,
             baseXp: 10
         })
     }
 
-    run = async (M: ISimplifiedMessage): Promise<void> => {
-        await axios
-            .get(`https://animechan.vercel.app/api/random`)
-            .then((response) => {
-                // console.log(response);
-                const text = `⛩ *Anime:* ${response.data.anime}\n\n*🎎 Character:* ${response.data.character}\n\n*✏ Quote:* ${response.data.quote}`
-                M.reply(text)
-            })
-            .catch((err) => {
-                M.reply(`🔍 Error: ${err}`)
-            })
+    run = async (M: ISimplifiedMessage, { joined }: IParsedArgs): Promise<void> => {
+        const random = await AnimeQuotes.randomQuote()
+        let randomText = ''
+        randomText += `*✏ Quote: ${random.quote}*\n`
+        randomText += `*🎗 Said by: ${random.name}*\n\n`
+        randomText += `*📛 Source: ${random.anime}*`
+        if (!joined) return void (await M.reply(`${randomText}`))
+        const chara = joined.trim()
+        const byChara = await AnimeQuotes.getRandomQuoteByCharacter(chara)
+        let charaText = ''
+        charaText += `*✏ Quote: ${byChara.quote}*\n`
+        charaText += `*🎗 Said by: ${byChara.name}*\n\n`
+        charaText += `*📛 Source: ${byChara.anime}*`
+        await M.reply(charaText)
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            .catch((reason: any) => M.reply(`${reason}`))
     }
 }
