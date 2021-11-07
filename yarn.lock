@@ -68,6 +68,14 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@freezegold/anime.js@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@freezegold/anime.js/-/anime.js-3.0.0.tgz#ca5ede710932066d7f83a3c39055d8a085818633"
+  integrity sha512-cMEuWHLk3YfINnSFBYb5iuuQ5PoTAcHwdcSFrF1AQ0r4qsXxV54w3n9IaNhURbeETl+BOOSbEaMV5FsEbP5ygw==
+  dependencies:
+    cheerio "^1.0.0-rc.10"
+    request "^2.88.2"
+
 "@hapi/bourne@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@hapi/bourne/-/bourne-2.0.0.tgz#5bb2193eb685c0007540ca61d166d4e1edaf918d"
