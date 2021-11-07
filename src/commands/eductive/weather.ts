@@ -21,7 +21,7 @@ export default class Command extends BaseCommand {
     run = async (M: ISimplifiedMessage, { joined }: IParsedArgs): Promise<void> => {
         if (!joined) return void M.reply('Please provide me the place name.')
         const place = joined.trim()
-        await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${place}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=tr`)
+        await axios.get(http://api.openweathermap.org/data/2.5/weather?q=${place}&units=metric&appid=${this.client.config.weatherAppid}&language=tr)
 /* Note
   If you want to add some response, we'd recommend you to explore the json itself which provided link returns.
   This stability of the url and API KEY is not guaranteed.
