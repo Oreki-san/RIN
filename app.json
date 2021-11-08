@@ -1,5 +1,5 @@
 {
-    "name": "Kaoi",
+    "name": "RIN",
     "description": "Maintained Fork of Void",
     "keywords": [
         "bot",
@@ -11,9 +11,9 @@
         "whatsapp-sticker-bot",
         "whatsapp-botto"
     ],
-    "website": "https://github.com/PrajjwalDatir/Kaoi#readme",
-    "repository": "https://github.com/PrajjwalDatir/Kaoi.git",
-    "logo": "https://avatars.githubusercontent.com/u/46681482?v=4",
+    "website": "https://github.com/Oreki-san/RIN#readme",
+    "repository": "https://github.com/Oreki-san/RIN.git",
+    "logo": "https://user-images.githubusercontent.com/77143046/137623471-cbe3e0f5-eb13-4321-abbd-7a1e6e73f9ce.jpg",
     "success_url": "/",
     "env": {
         "PREFIX": {
