@@ -32,7 +32,7 @@ export default class Command extends BaseCommand {
                     MessageType.image,
                     undefined,
                     undefined,
-                    `More than one waifu, will ruin your laifu.\n`,
+                    `More than one waifu, will ruin your laifu.`,
                     undefined
                 ).catch((e) => {
                     console.log(`This Error occurs when an image is sent via M.reply()\n Child Catch Block : \n${e}`)
