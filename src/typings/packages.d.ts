@@ -6,5 +6,5 @@ declare module 'wikipedia'
 declare module 'translate-google'
 declare module 'animequotes'
 declare module 'mal-scraper'
-declare module '@freezegold/anime.js'
-© 2021 GitHub, Inc.
+
+
