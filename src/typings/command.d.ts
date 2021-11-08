@@ -31,7 +31,7 @@ export type TCategory =
     | 'moderation'
     | 'nsfw'
     | 'utils'
-    | 'anime'
+    | 'weeb'
     | 'category'
     
 
