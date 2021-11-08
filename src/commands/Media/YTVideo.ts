@@ -8,30 +8,25 @@ import { ISimplifiedMessage } from '../../typings'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
-            command: 'ytv',
+            command: 'ytvideo',
             description: 'Downloads given YT Video',
             category: 'media',
-            aliases: ['ytvideo'],
+            aliases: ['ytv'],
             usage: `${client.config.prefix}ytv [URL]`,
-            dm: true,
             baseXp: 10
         })
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
-        if (!M.urls.length) return void M.reply('Please provide the URL of the YT video you want too download')
+        if (!M.urls.length) return void M.reply('🔎 Provide the URL of the YT video you want to download')
         const video = new YT(M.urls[0], 'video')
-        if (!video.validateURL()) return void M.reply(`Please provide a Valid YT URL`)
+        if (!video.validateURL()) return void M.reply(`Provide a Valid YT URL`)
         const { videoDetails } = await video.getInfo()
-        M.reply(
-            await video.getThumbnail(),
-            MessageType.image,
-            Mimetype.jpeg,
-            undefined,
-            `🍥 *Title:* ${videoDetails.title}\n🕰️ *Duration:* ${videoDetails.lengthSeconds}\n🗒️ *Description:* ${videoDetails.description}`
+        M.reply('👾 sending...')
+        if (Number(videoDetails.lengthSeconds) > 1800)
+            return void M.reply('⚓ Cannot download videos longer than 30 minutes')
+        M.reply(await video.getBuffer(), MessageType.video).catch((reason: Error) =>
+            M.reply(`❌ an error occurred, Reason: ${reason}`)
         )
-        if (Number(videoDetails.lengthSeconds) > 1500)
-            return void M.reply('Cannot Download videos longer than 25 Minutes')
-        M.reply(await video.getBuffer(), MessageType.video).catch(() => M.reply('An error occured...'))
     }
 }
