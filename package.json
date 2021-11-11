@@ -1,5 +1,5 @@
 {
-    "name": "RIN",
+    "name": "Void",
     "version": "2.0.0",
     "description": "A fully Object Oriented WhatsApp bot built with TypeScript",
     "main": "dist/void.js",
@@ -19,7 +19,7 @@
         "typescript",
         "whatsapp",
         "whatsapp-botto-void",
-        "RIN"
+        "Kaoi"
     ],
     "author": "Synthesized Infinity",
     "license": "AGPL-3.0",
