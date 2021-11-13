@@ -48,7 +48,8 @@ Button : If you are deploying from a fork
 -   Make sure to follow the ESLint Rules while editing the code and run
     `yarn run prettier-format` before opening PRs
 ## Give a ⭐ if this project helped you
-## Some WhatsApp bots are recommended
+
+## 🚀Some WhatsApp bots are recommended🚀
 <details>
 <summary>Click Here</summary>
 
