@@ -48,3 +48,11 @@ Button : If you are deploying from a fork
 -   Make sure to follow the ESLint Rules while editing the code and run
     `yarn run prettier-format` before opening PRs
 ## Give a ⭐ if this project helped you
+## Some WhatsApp bots are recommended
+<details>
+<summary>Click Here</summary>
+
+![Kaoi](https://github.com/kaoi.png?size=70)[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=PrajjwalDatir&repo=Kaoi&theme=buefy)](https://github.com/PrajjwalDatir/kaoi)
+
+![Chitoge](https://github.com/Chitoge.png?size=70)[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=ShinNouzen&repo=Chitoge&theme=buefy)](https://github.com/ShinNouzen/Chitoge)
+
