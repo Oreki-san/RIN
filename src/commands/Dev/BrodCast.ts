@@ -10,7 +10,7 @@ export default class Command extends BaseCommand {
             command: 'broadcast',
             description: 'Tags all users in group chat',
             aliases: ['BC', 'announcement','bc'],
-            category: 'general',
+            category: 'Dev',
             usage: `${client.config.prefix}everyone`,
             modsOnly: true,
             baseXp: 0
