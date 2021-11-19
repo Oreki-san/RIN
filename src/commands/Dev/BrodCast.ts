@@ -8,21 +8,21 @@ export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
             command: 'broadcast',
-            description: 'Sends msg to all group chats',
+            description: 'Tags all users in group chat',
             aliases: ['BC', 'announcement','bc'],
-            category: 'Dev',
-            usage: `${client.config.prefix}broadcast`,
+            category: 'general',
+            usage: `${client.config.prefix}everyone`,
             modsOnly: true,
             baseXp: 0
         })
     }
 
-    run = async (M: ISimplifiedMessage,  { joined }: IParsedArgs): Promise<void> => {
+run = async (M: ISimplifiedMessage,  { joined }: IParsedArgs): Promise<void> => {
         
         const term = joined.trim();
         const chats:any= this.client.chats.all().filter(v => !v.read_only && !v.archive).map(v => v.jid).map(jids => jids.includes("g.us")? jids : null).filter(v=>v);
         for(let i =0;i<chats.length;i++){
-        const text = `*「 🤍RIN Broadcast🤍 」* \n *📢 announcement :* \n${term} By *${M.sender.username}*`
+        const text = `*「 📣RIN Broadcast📣 」* \n *📢 announcement :* \n${term} By *${M.sender.username}*`
         this.client.sendMessage(chats[i], text,MessageType.text,{contextInfo : {mentionedJid : M.groupMetadata?.participants.map((user) => user.jid) }})
         }
     }
