@@ -8,10 +8,10 @@ export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
             command: 'broadcast',
-            description: 'Tags all users in group chat',
+            description: 'Tags all users in all group chat',
             aliases: ['BC', 'announcement','bc'],
             category: 'Dev',
-            usage: `${client.config.prefix}everyone`,
+            usage: `${client.config.prefix}broadcast`,
             modsOnly: true,
             baseXp: 0
         })
