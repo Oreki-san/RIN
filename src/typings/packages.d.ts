@@ -9,7 +9,7 @@ declare module "mywaifulist-scraper";
 declare module "mangadex-full-api";
 declare module "mal-scraper";
 declare module "wikipedia";
-declare module "anime-wallpapers";
+declare module "anime-wallpaper";
 declare module "translate-google";
 declare module "trace.moe.ts";
 declare module "animequotes";
