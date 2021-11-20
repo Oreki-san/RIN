@@ -20,7 +20,7 @@ export default class Command extends BaseCommand {
 	}
 
 	run = async (M: ISimplifiedMessage): Promise<void> => {
-		const wall = await akaneko.mobileWallpapers();
+		const wall = await akaneko.wallpapers();
 		const buffer = await request.buffer(wall).catch((e) => {
 			return void M.reply(e.message);
 		});
@@ -31,7 +31,7 @@ export default class Command extends BaseCommand {
 					MessageType.image,
 					undefined,
 					undefined,
-					`🤍 Here you go.\n`,
+					`🌟 Here you go.\n`,
 					undefined
 				).catch((e) => {
 					console.log(
