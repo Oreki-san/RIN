@@ -54,5 +54,5 @@ Button : If you are deploying from a fork
 
 ![Kaoi][![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=PrajjwalDatir&repo=Kaoi&theme=buefy)](https://github.com/PrajjwalDatir/kaoi)
 
-![Chitoge][![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=ShinNouzen&repo=Chitoge&theme=buefy)](https://github.com/ShinNouzen/Chitoge)
+![Chitoge][![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=ShineiIchijo&repo=Chitoge&theme=buefy)](https://github.com/ShinNouzen/Chitoge)
 
