@@ -24,12 +24,12 @@ export default class Command extends BaseCommand {
 	): Promise<void> => {
 		if (!joined)
 			return void (await M.reply(`Give me a wallpaper term to search, Baka!`));
-		const chitoge: any = joined.trim().split("|");
-		const term: string = chitoge[0];
-		const amount: number = chitoge[1];
+		const rin: any = joined.trim().split("|");
+		const term: string = rin[0];
+		const amount: number = rin[1] || 1;
 		if (!amount)
 			return void M.reply(
-				`Give me the number of wallpapers to send, Baka!\n\nExample: *${this.client.config.prefix}wallpaper chitoge|5*`
+				`Give me the number of wallpapers to send, Baka!\n\nExample: *${this.client.config.prefix}wallpaper rin|5*`
 			);
 		if (amount > 20)
 			return void M.reply(`Do you want me to spam in this group?`);
