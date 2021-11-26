@@ -25,7 +25,7 @@ export default class Command extends BaseCommand {
 		if (!joined)
 			return void (await M.reply(`Give me a wallpaper term to search, Baka!`));
 		const rin: any = joined.trim().split("|");
-		const term: string = rin[0];
+		const term: string = rin[1] || 1;
 		const amount: number = rin[1] || 1;
 		if (!amount)
 			return void M.reply(
