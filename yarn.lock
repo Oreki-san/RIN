@@ -1438,6 +1438,12 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+better-tord@^1.3.7:
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/better-tord/-/better-tord-1.3.7.tgz#f083122ef1515e3c2340b98a9830286b126cae6a"
+  integrity sha512-Db7KAyw2RM67yNQmqZyQsnr8KssDff0ai24IPUegv9ji/lcGBYGcUmYcO2+kLHkZ/6HVT2SR3OcTKX9tZaVEDA==
+
+
 bin-links@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/bin-links/-/bin-links-2.3.0.tgz#1ff241c86d2c29b24ae52f49544db5d78a4eb967"
