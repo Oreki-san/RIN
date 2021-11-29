@@ -24,3 +24,4 @@ declare module "imgbb-uploader";
 declare module "text-from-image";
 declare module "emoji-api";
 declare module "vtuber-wiki";
+declare module "better-tord";
