@@ -6856,6 +6856,22 @@ ytdl-core@^4.8.0, ytdl-core@^4.9.1:
     miniget "^4.0.0"
     sax "^1.1.3"
 
+yuri-canvas@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/yuri-canvas/-/yuri-canvas-4.0.6.tgz#fbf4bf750b10ca71ab6229e2332708c0dad5442f"
+  integrity sha512-XG5B0g7uRxiVABbW8ZFUerwFQOiNl0hnnIczmVQTFGT37Qx+rSiSE8mGHucjHEWv9ZKrwp3rEe2++L8aTXJVUg==
+  dependencies:
+    "@jimp/custom" "^x"
+    "@jimp/plugin-circle" "^x"
+    "@jimp/plugin-color" "^x"
+    "@jimp/plugin-resize" "^x"
+    canvas "^2.6.1"
+    gifencoder "^2.0.1"
+    jimp "^x"
+    moment "^2.27.0"
+    moment-duration-format "^2.3.2"
+    node-canvas-with-twemoji-and-discord-emoji "^1.1.4"
+
 zlibjs@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/zlibjs/-/zlibjs-0.3.1.tgz#50197edb28a1c42ca659cc8b4e6a9ddd6d444554"
