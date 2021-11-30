@@ -95,6 +95,7 @@
         "wa-sticker-formatter": "^4.2.0",
         "wikipedia": "^1.1.6",
         "yt-search": "^2.10.2",
-        "ytdl-core": "^4.9.1"
+        "ytdl-core": "^4.9.1",
+        "yuri-canvas": "^4.0.6"
     }
 }
