@@ -5280,6 +5280,15 @@ ptable@^0.0.3:
   dependencies:
     array-miner "0.0.1"
 
+public-waifulist@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/public-waifulist/-/public-waifulist-0.0.2.tgz#3813d10d7234d91633269f7391d5b0e4cfaa971c"
+  integrity sha512-wPEz6knfyf6xs9yD/8DdU5tudIl3V9dWltnO8wAVO8cwNou0RwhzeFq2PI0A2QshOQAYloXY3AunH2NboEBKog==
+  dependencies:
+    cheerio "^1.0.0-rc.3"
+    request "^2.88.0"
+    request-promise "^4.2.5"
+
 pump@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/pump/-/pump-3.0.0.tgz#b4a2116815bde2f4e1ea602354e8c75565107a64"
