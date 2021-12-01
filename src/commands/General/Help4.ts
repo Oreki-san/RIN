@@ -40,4 +40,3 @@ export default class Command extends BaseCommand {
         )
     }
 }
-       

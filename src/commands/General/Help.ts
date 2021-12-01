@@ -29,42 +29,42 @@ export default class Command extends BaseCommand {
 〽 ᴛʜɪꜱ ɪꜱ ᴀ ʀɪɴ-ʙᴏᴛᴛᴏ!
 
 🧧 ɪꜰ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ɪꜱꜱᴜᴇꜱ ᴡɪᴛʜ ᴛʜᴇ ʙᴏᴛ ᴏʀ ᴀɴʏ ᴇʀʀᴏʀ ᴛʜᴇɴ ᴄᴏɴᴛᴀᴄᴛ ʙᴏᴛ ᴏᴡɴᴇʀ. ᴛʏᴘᴇ " ${this.client.config.prefix}ᴏᴡɴᴇʀ " ᴛᴏ ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ!
-      
-🎗 ᴘʀᴇꜰɪx - ${this.client.config.prefix} 
+
+🎗 ᴘʀᴇꜰɪx - ${this.client.config.prefix}
 ────────────────
 -🄶🄴🄽🄴🅁🄰🄻 🧣
 
-🎐 ${this.client.config.prefix}Ｈｅｌｐ1 [${this.client.config.prefix}ｈ１]   
-      
--🅆🄴🄴🄱🅂 🧣    
-      
-🎐 ${this.client.config.prefix}Ｈｅｌｐ2 [${this.client.config.prefix}ｈ2]       
-      
--🄵🅄🄽 🧣     
-      
+🎐 ${this.client.config.prefix}Ｈｅｌｐ1 [${this.client.config.prefix}ｈ１]
+
+-🅆🄴🄴🄱🅂 🧣
+
+🎐 ${this.client.config.prefix}Ｈｅｌｐ2 [${this.client.config.prefix}ｈ2]
+
+-🄵🅄🄽 🧣
+
 🎐 ${this.client.config.prefix}Ｈｅｌｐ3 [${this.client.config.prefix}ｈ3]
-      
--🄼🄴🄳🄸🄰 🧣     
 
- 🎐 ${this.client.config.prefix}Ｈｅｌｐ4 [${this.client.config.prefix}ｈ4]    
-      
--🅄🅃🄸🄻🅂 🧣     
+-🄼🄴🄳🄸🄰 🧣
 
- 🎐 ${this.client.config.prefix}Ｈｅｌｐ5 [${this.client.config.prefix}ｈ5]    
-      
+ 🎐 ${this.client.config.prefix}Ｈｅｌｐ4 [${this.client.config.prefix}ｈ4]
+
+-🅄🅃🄸🄻🅂 🧣
+
+ 🎐 ${this.client.config.prefix}Ｈｅｌｐ5 [${this.client.config.prefix}ｈ5]
+
 -🄼🄾🄳🄴🅁🄰🅃🄸🄾🄽 🧣
 
-🎐 ${this.client.config.prefix}Ｈｅｌｐ6 [${this.client.config.prefix}ｈ6]     
-      
--🄴🄳🅄🄲🄰🅃🄸🅅🄴 🧣     
-      
-🎐 ${this.client.config.prefix}Ｈｅｌｐ7 [${this.client.config.prefix}ｈ7]      
-      
--🄽🅂🄵🅆 🧣     
-      
+🎐 ${this.client.config.prefix}Ｈｅｌｐ6 [${this.client.config.prefix}ｈ6]
+
+-🄴🄳🅄🄲🄰🅃🄸🅅🄴 🧣
+
+🎐 ${this.client.config.prefix}Ｈｅｌｐ7 [${this.client.config.prefix}ｈ7]
+
+-🄽🅂🄵🅆 🧣
+
 🎐 ${this.client.config.prefix}Ｈｅｌｐ8 [${this.client.config.prefix}ｈ8]
-      
-────────────────      
+
+────────────────
  ──❅┈[ ᖇᎥᑎ ᗷᗝ丅 ]┈❅───
 ┌────────────┈❅
 │   🧨 ᖇᎥᑎ
@@ -75,4 +75,3 @@ export default class Command extends BaseCommand {
         )
     }
 }
-       
