@@ -9,17 +9,17 @@ import request from '../../lib/request'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
-            command: 'help',
+            command: '2help',
             description: 'Displays the help menu or shows the info of the command provided',
             category: 'general',
-            usage: `${client.config.prefix}help (command_name)`,
-            aliases: ['h']
+            usage: `${client.config.prefix}2help (command_name)`,
+            aliases: ['2h']
         })
     }
 
     run = async (M: ISimplifiedMessage, parsedArgs: IParsedArgs): Promise<void> => {
             const n = [
-            './assets/Rin/rin.mp4'
+            './assets/Rin/rin.mp4','./assets/Rin/rin-1.mp4','./assets/Rin/rin-2.mp4','./assets/Rin/rin-3.mp4','./assets/Rin/rin-4.mp4','./assets/Rin/rin-5.mp4','./assets/Rin/rin-6.mp4'
         ]
         let rin = n[Math.floor(Math.random() * n.length)]
         if (!parsedArgs.joined) {
