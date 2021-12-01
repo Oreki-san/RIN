@@ -2,16 +2,15 @@ import MessageHandler from "../../Handlers/MessageHandler";
 import BaseCommand from "../../lib/BaseCommand";
 import WAClient from "../../lib/WAClient";
 import { IParsedArgs, ISimplifiedMessage } from "../../typings";
-import { Character } from "mailist";
+import axios from "axios";
 import request from "../../lib/request";
 import { MessageType } from "@adiwajshing/baileys";
-// import { MessageType, Mimetype } from '@adiwajshing/baileys'
 
 export default class Command extends BaseCommand {
 	constructor(client: WAClient, handler: MessageHandler) {
 		super(client, handler, {
 			command: "character",
-			description: `Gives you the data of the given character.`,
+			description: `Searches the given character.`,
 			aliases: ["chara"],
 			category: "weeb",
 			usage: `${client.config.prefix}chara [name]`,
@@ -23,26 +22,25 @@ export default class Command extends BaseCommand {
 		M: ISimplifiedMessage,
 		{ joined }: IParsedArgs
 	): Promise<void> => {
-		if (!joined)
-			return void (await M.reply(`Give me an anime character name, Baka!`));
+		/*eslint-disable @typescript-eslint/no-explicit-any*/
+		/*eslint-disable @typescript-eslint/no-unused-vars*/
+		if (!joined) return void (await M.reply(`Give me a character name, Baka!`));
 		const chitoge = joined.trim();
-		const client = new Character();
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
-		const chara = await client.character(chitoge).catch((err: any) => {
-			return void M.reply(`Couldn't find any matching character.`);
-		});
-		//if (!chara)
-		//return void (await M.reply(`Couldn't find any matching character.`));
+		const chara = await axios
+			.get(`https://api.jikan.moe/v3/search/character?q=${chitoge}`)
+			.catch((err: any) => {
+				return void M.reply(`Couldn't find any matching character.`);
+			});
+
 		let text = "";
-		text += `💙 *Name: ${chara.data.characters.results[0].name.full}*\n`;
-		text += `💛 *Source: ${chara.data.characters.results[0].media.edges[0].node.title.userPreferred}*\n\n`;
-		text += `🌐 *URL: ${chara.data.characters.results[0].siteUrl}*\n\n`;
-		text += `❤ *Description:* ${chara.data.characters.results[0].description
-			.replace(/\[/g, "")
-			.replace(/\]/g, "")}\n`;
+		for (let i = 0; i < 10; i++) {
+			text += `💙 *Name: ${chara?.data.results[i].name}*\n`;
+			text += `🌐 *URL: ${chara?.data.results[i].url}*\n\n`;
+			text += `Use ${this.client.config.prefix}charaid ${chara?.data.results[i].mal_id} to get the full info of this character.\n\n`;
+		}
 
 		const buffer = await request
-			.buffer(chara.data.characters.results[0].image.large)
+			.buffer(chara?.data.results[0].image_url)
 			.catch((e) => {
 				return void M.reply(e.message);
 			});
