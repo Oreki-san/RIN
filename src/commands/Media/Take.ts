@@ -22,7 +22,7 @@ export default class Command extends BaseCommand {
             baseXp: 30
         })
     }
-    
+
     run = async (M: ISimplifiedMessage, parsedArgs: IParsedArgs): Promise<void> => {
         let buffer
  const pack = parsedArgs.joined.split('|');
@@ -30,9 +30,9 @@ export default class Command extends BaseCommand {
         if (!buffer) return void M.reply(`You didn't provide any sticker to convert`)
         const filename = `${tmpdir()}/${Math.random().toString(36)}`
         const sticker:any = await  new Sticker(buffer, {
-            pack: pack[1] || '☯️ For You ', 
-            author: pack[2] || 'By TOSHIRO ☯️', 
-            quality: 50 
+            pack: pack[1] || '☯️ For You ',
+            author: pack[2] || 'By TOSHIRO ☯️',
+            quality: 50
         }).build();
           fs.writeFileSync(`${filename}.webp`,sticker);
         const stickerbuffer =  fs.readFileSync(`${filename}.webp`)

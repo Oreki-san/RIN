@@ -67,7 +67,7 @@ export default class Command extends BaseCommand {
 ────────────────
  ──❅┈[ RIN BOT ]┈❅───
 ┌────────────┈❅
-│   🧨 RIN 
+│   🧨 RIN
 │   ©️ TOSHIRO BOTTO
 └────────────┈⁂
 ❅┈[𝐇𝐚𝐯𝐞 𝐆𝐫𝐞𝐚𝐭 𝐃𝐚𝐲]┈❅
