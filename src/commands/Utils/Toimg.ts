@@ -19,7 +19,7 @@ export default class Command extends BaseCommand {
       command: "toimg",
       aliases: ["toimage"],
       description: "sends image/gif of a sticker",
-      category: "Utilis",
+      category: "utilis",
       usage: `${client.config.prefix}toimg [(tag)[sticker]]`,
       baseXp: 35,
     });
