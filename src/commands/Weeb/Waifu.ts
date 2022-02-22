@@ -20,32 +20,22 @@ export default class Command extends BaseCommand {
     }
 
     run = async (M: ISimplifiedMessage): Promise<void> => {
-        // fetch result of https://waifu.pics/api/sfw/waifu from the API using axios
         const { data } = await axios.get('https://waifu.pics/api/sfw/waifu')
-        const buffer = await request.buffer(data.url).catch((e) => {
-            return void M.reply(e.message)
-        })
-        while (true) {
-            try {
-                M.reply(
-                    buffer || 'Could not fetch image. Please try again later',
-                    MessageType.image,
-                    undefined,
-                    undefined,
-                    `More than one waifu, will ruin your laifu.`,
-                    undefined
-                ).catch((e) => {
-                    console.log(`This Error occurs when an image is sent via M.reply()\n Child Catch Block : \n${e}`)
-                    // console.log('Failed')
-                    M.reply(`Could not fetch image. Here's the URL: ${data.url}`)
-                })
-                break
-            } catch (e) {
-                // console.log('Failed2')
-                M.reply(`Could not fetch image. Here's the URL : ${data.url}`)
-                console.log(`This Error occurs when an image is sent via M.reply()\n Parent Catch Block : \n${e}`)
-            }
+        const buffer: any = await request.buffer(data.url);
+        const media:any = await this.client.prepareMessage(M.from,buffer,MessageType.image);
+
+        const buttons = [
+            {buttonId: 'waifu', buttonText: {displayText: 'More Waifu'}, type: 1},
+            {buttonId: 'loli', buttonText: {displayText: 'Gib loli'}, type: 1}
+          ]
+          const buttonMessage: any = {
+            contentText: 'More than one waifu, will ruin your laifu.\n',
+            footerText: '',
+            buttons: buttons,
+            headerType: 4,
+            imageMessage: media.message?.imageMessage
         }
-        return void null
+          await this.client.sendMessage(M.from, buttonMessage, MessageType.buttonsMessage)
+      
     }
 }
