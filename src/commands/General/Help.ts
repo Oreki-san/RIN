@@ -57,7 +57,7 @@ export default class Command extends BaseCommand {
     //         const command = this.handler.commands.get(key) || this.handler.aliases.get(key)
     //         if (!command) return void M.reply(`No Command of Alias Found | "${key}"`)
     //         const state = await this.client.DB.disabledcommands.findOne({ command: command.config.command })
-           
+
 const weeb = [
     {title: 'anime', rowId:"rowid1"},
     {title: 'animequote', rowId:"rowid1"},
@@ -184,7 +184,7 @@ const weeb = [
     {title: 'open', rowId:"rowid2"},
     {title: 'revoke', rowId:"rowid2"},
     {title: 'ppcouple', rowId:"rowid2"}]
-    
+
    const sections = [
                      {title: "fun 🚀", rows: fun },
                      {title: "general 🌀", rows: general },
@@ -276,7 +276,7 @@ this.client.sendMessage(M.from,button,MessageType.listMessage)
 
                     //             return void this.client.sendMessage(M.from, { url: rin }, MessageType.video, {quoted:M.WAMessage,
 //             mimetype: Mimetype.gif,
-//             caption: `${text} 
+//             caption: `${text}
 //  ──❅┈[ ISHTAR ᗷᗝ丅 ]┈❅───
 // ┌────────────┈❅
 // │   🧨 I S H T A R
