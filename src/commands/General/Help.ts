@@ -40,7 +40,7 @@ export default class Command extends BaseCommand {
             🤍 Konichiwa senpai 🤍
             ╭─「(づ￣ 3￣)づ」
             │⋊ ᴜꜱᴇʀ: *${M.sender.username}*
-            │⋊ ɴᴀᴍᴇ: I S H T A R
+            │⋊ ɴᴀᴍᴇ: ᖇᎥᑎ
             │⋊ ᴘʀᴇꜰɪx: ${this.client.config.prefix}
             │⋊ ᴏᴡɴᴇʀ: <${this.client.config.prefix}mod>
             ╰────────────┈平和                            \n\n`
@@ -201,7 +201,7 @@ const txt = '\n' +
     ' 🤍 Konichiwa senpai 🤍\n' +
     '╭─「(づ￣ 3￣)づ」\n' +
     `│⋊ ᴜꜱᴇʀ: *${M.sender.username}*\n` +
-    '│⋊ ɴᴀᴍᴇ: I S H T A R\n' +
+    '│⋊ ɴᴀᴍᴇ:. ᖇᎥᑎ\n' +
     '│⋊ ᴘʀᴇꜰɪx: #\n' +
     '│⋊ ᴏᴡɴᴇʀ: <#mod>\n' +
     '╰────────────┈平和                            \n' +
@@ -245,7 +245,7 @@ const txt = '\n' +
     ' \n' +
     ' ──❅┈[ ISHTAR ᗷᗝ丅 ]┈❅───\n' +
     '┌────────────┈❅\n' +
-    '│   🧨 I S H T A R\n'  +
+    '│   🧨 ᖇᎥᑎ\n'  +
     '│   ©️ Synthesized Infinity Botto\n' +
     '└────────────┈⁂\n' +
     '❅┈[𝐇𝐚𝐯𝐞 𝐆𝐫𝐞𝐚𝐭 𝐃𝐚𝐲]┈❅\n'             +
@@ -277,9 +277,9 @@ this.client.sendMessage(M.from,button,MessageType.listMessage)
                     //             return void this.client.sendMessage(M.from, { url: rin }, MessageType.video, {quoted:M.WAMessage,
 //             mimetype: Mimetype.gif,
 //             caption: `${text}
-//  ──❅┈[ ISHTAR ᗷᗝ丅 ]┈❅───
+//  ──❅┈[ ᖇᎥᑎ ᗷᗝ丅 ]┈❅───
 // ┌────────────┈❅
-// │   🧨 I S H T A R
+// │   🧨 ᖇᎥᑎ
 // │   ©️ Synthesized Infinity Botto
 // └────────────┈⁂
 // ❅┈[𝐇𝐚𝐯𝐞 𝐆𝐫𝐞𝐚𝐭 𝐃𝐚𝐲]┈❅
