@@ -40,6 +40,8 @@
     },
     "dependencies": {
         "@adiwajshing/baileys": "^3.5.3",
+        "@shineiichijo/marika": "^2.0.2",
+        "@shineiichijo/nhentai-pdf": "^1.0.4",
         "@types/node-cron": "^2.0.3",
         "@types/qr-image": "^3.2.3",
         "akaneko": "^5.2.2",
@@ -56,8 +58,8 @@
         "chess-image-generator-ts": "^1.0.0",
         "chess-node": "^1.1.0",
         "cron": "^1.8.2",
-        "dotenv": "^10.0.0",
         "discord-image-generation": "^1.4.9",
+        "dotenv": "^10.0.0",
         "emoji-api": "^2.0.1",
         "express": "^4.17.1",
         "fs-extra": "^10.0.0",
@@ -95,10 +97,10 @@
         "translate-google": "^1.5.0",
         "ultra-lyrics": "^1.0.3",
         "vtuber-wiki": "^1.1.5",
-        "wa-sticker-formatter": "^4.2.0",
+        "wa-sticker-formatter": "^4.3.2",
         "wikipedia": "^1.1.6",
-        "yt-search": "^2.10.2",
-        "ytdl-core": "^4.9.1",
+        "yt-search": "^2.10.3",
+        "ytdl-core": "^4.10.1",
         "yuri-canvas": "^4.0.6"
     }
 }
