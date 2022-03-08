@@ -24,11 +24,11 @@ export default class Command extends BaseCommand {
             baseXp: 35
         })
     }
-    
+
     run = async (M: ISimplifiedMessage, parsedArgs: IParsedArgs): Promise<void> => {
         let buffer
  let   exe = promisify(exec)
- 
+
  if (M.quoted?.message?.message?.stickerMessage) buffer = await this.client.downloadMediaMessage(M.quoted.message)
  else if (M.quoted?.message?.message?.stickerMessage?.isAnimated) buffer = await this.client.downloadMediaMessage(M.WAMessage)
         if (!buffer) return void M.reply(`You didn't provide any sticker to convert`)
@@ -38,9 +38,9 @@ export default class Command extends BaseCommand {
             await exe(
                 `ffmpeg -i ${filename}.webp ${filename}.png`
                 )
-     
+
                 const imagebuffer = await fs.readFile(`${filename}.png`)
-                console.log(filename)       
+                console.log(filename)
             return void M.reply(
                 imagebuffer,
                 MessageType.image,
@@ -48,7 +48,7 @@ export default class Command extends BaseCommand {
                 undefined
                 )
                 /* only image works for now
-		animated webp will give error 
+		animated webp will give error
 		*/
             } catch (error) {
                 async function tomp4(buffer:Buffer): Promise<Buffer> {
@@ -74,7 +74,7 @@ export default class Command extends BaseCommand {
                 return buff
 
             }
-                
+
                const animatedgif = await tomp4(buffer);
 
 
