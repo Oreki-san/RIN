@@ -26,7 +26,7 @@ export default class Command extends BaseCommand {
 
     run = async (M: ISimplifiedMessage, parsedArgs: IParsedArgs): Promise<void> => {
         let buffer
- let const = promisify(exec)
+ let   exe = promisify(exec)
 
  if (M.quoted?.message?.message?.stickerMessage) buffer = await this.client.downloadMediaMessage(M.quoted.message)
  else if (M.quoted?.message?.message?.stickerMessage?.isAnimated) buffer = await this.client.downloadMediaMessage(M.WAMessage)
