@@ -1,5 +1,4 @@
 import { MessageType, Mimetype } from '@adiwajshing/baileys'
-import { Sticker, Categories, StickerTypes } from 'wa-sticker-formatter'
 import MessageHandler from '../../Handlers/MessageHandler'
 import BaseCommand from '../../lib/BaseCommand'
 import WAClient from '../../lib/WAClient'
@@ -27,7 +26,7 @@ export default class Command extends BaseCommand {
 
     run = async (M: ISimplifiedMessage, parsedArgs: IParsedArgs): Promise<void> => {
         let buffer
- let   exe = promisify(exec)
+ let const = promisify(exec)
 
  if (M.quoted?.message?.message?.stickerMessage) buffer = await this.client.downloadMediaMessage(M.quoted.message)
  else if (M.quoted?.message?.message?.stickerMessage?.isAnimated) buffer = await this.client.downloadMediaMessage(M.WAMessage)
