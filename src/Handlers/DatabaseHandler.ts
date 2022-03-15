@@ -11,4 +11,5 @@ export default class DatabaseHandler implements IDBModels {
     session = SessionModel
     disabledcommands = DisabledCommandsModel
     feature = IFeatureModel
+    cd = cdModel
 }
