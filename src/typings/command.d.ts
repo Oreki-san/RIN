@@ -32,6 +32,7 @@ export type TCategory =
     | 'nsfw'
     | 'utils'
     | 'weeb'
+    | 'economy'
     | 'category'
     
 
