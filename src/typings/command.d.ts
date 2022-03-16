@@ -34,5 +34,3 @@ export type TCategory =
     | 'weeb'
     | 'economy'
     | 'category'
-    
-
